@@ -1,0 +1,25 @@
+<!-- <button class="btn-handler" (click)="handleClick()">Click me</button>
+
+<p [class.shiny]="isToggle">This text will be shiny on click</p>
+
+<hr />
+<div [style.color]="isToggle ? 'orange' : 'black'">
+  This is dynamic color change
+</div>
+<div [style.background]="isToggle ? 'orange' : 'black'">
+  This is dynamic background color change!
+</div>
+<hr />
+<div *ngIf="isToggle">
+  <div [class]="greenBackground">Toggle me!</div>
+  <img [attr.src]="imgUrl" />
+</div> -->
+<input type="text" placeholder="username" #username />
+<button (click)="handleInput(username)">Handle Input</button>
+<div [style.background]="colorValue">test 123 {{ colorValue }}</div>
+
+<!-- <div [class]="['first', 'secod']">Not a ngClass</div>
+<div [ngClass]="['first', 'secod']">Test ngClass</div>
+<div [attr.data-test123]="'test321'">
+  This is testing of custom data attribute
+</div> -->

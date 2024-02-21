@@ -1,0 +1,26 @@
+<!-- <h3>
+  Hello, my first Angular application!
+  {{ [1, 2, 3].join(", ") }}
+</h3>
+
+<app-nav />
+<app-nav></app-nav> -->
+
+<!--
+    Markup:
+        <div>test123</div>
+
+    Code behind: 
+        const div = document.createElement('div');
+        div.textContnet = 'test123';
+        const appRoot = document.getElementById('app-root');
+        appRoot.appendChild(div);
+-->
+
+<app-navigation />
+<app-user-list />
+<app-playground color="{{ colorRedForPlayground }}" />
+<app-playground
+  color="{{ colorGreenForPlayground }}"
+  (onTestOutput)="onOutputFromChild($event)"
+/>
