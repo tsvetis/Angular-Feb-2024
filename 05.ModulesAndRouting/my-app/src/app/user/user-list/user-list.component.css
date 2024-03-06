@@ -1,0 +1,29 @@
+.btn {
+  width: 100px;
+  height: 50px;
+  border-radius: 5px;
+  border: 1px solid black;
+  background-color: aliceblue;
+  font-size: 22px;
+}
+
+.btn:hover {
+  background-color: rgb(53, 109, 131);
+  color: white;
+  cursor: pointer;
+}
+
+.disabled {
+  background-color: gray;
+  pointer-events: none;
+}
+
+.item {
+  margin: 10px 0;
+}
+
+.item:hover {
+  background-color: gray;
+  color: white;
+  cursor: pointer;
+}

@@ -1,0 +1,76 @@
+<div>{{ title }}</div>
+
+<div>
+  @if (task2.status === 'inProgress') {
+  <div style="border: 1px solid blue">
+    {{ task2.name }} - {{ task2.status }}
+  </div>
+  } @else if (task2.status === 'todo') {
+  <div style="border: 2px solid rgb(0, 255, 26)">
+    {{ task2.name }} - {{ task2.status }}
+  </div>
+  } @else {
+  <div style="border: 2px solid rgb(255, 0, 149)">
+    {{ task2.name }} - {{ task2.status }}
+  </div>
+  }
+</div>
+
+<br />
+<hr />
+<br />
+
+<div>
+  @for (task of tasks; track task.id) {
+  <div>{{ task.name }} - {{ task.status }}</div>
+  } @empty {
+  <div>Sorry, This collection is empty :(</div>
+  }
+  <!-- 
+  <div *ngFor="let task of tasks">
+    {{ task.name }}
+  </div> -->
+</div>
+
+<br />
+<hr />
+<br />
+
+<div>
+  @switch (task1.status) { @case ('todo') {
+  <div style="border: 2px solid rgb(0, 255, 26)">
+    {{ task1.name }} - {{ task1.status }}
+  </div>
+  } @case ('inProgress') {
+  <div style="border: 1px solid blue">
+    {{ task1.name }} - {{ task1.status }}
+  </div>
+  } @default {
+  <div style="border: 2px solid rgb(255, 0, 149)">
+    {{ task1.name }} - {{ task1.status }}
+  </div>
+  } }
+</div>
+
+<br />
+<hr />
+<br />
+
+<br />
+<hr />
+<br />
+
+<div>
+  @defer(on viewport) {
+  <div>Deferred view!</div>
+  <app-home-test />
+
+  } @loading( minimum 300ms) {
+  <div>Loading</div>
+  } @placeholder(minimum 3000ms) {
+  <div>Placeholder!</div>
+  } @error {
+  <div>Error!</div>
+  }
+</div>
+<router-outlet />
