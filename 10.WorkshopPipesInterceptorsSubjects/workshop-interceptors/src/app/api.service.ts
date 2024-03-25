@@ -25,6 +25,16 @@ export class ApiService {
     return this.http.post<Theme>(`/api/themes`, { themeName, postText });
   }
 
+  updateTheme(themeId: string, postId: string, postText: string) {
+    return this.http.put<Theme>(`/api/themes/${themeId}/posts/${postId}`, {
+      postText,
+    });
+  }
+
+  deleteTheme(themeId: string, postId: string) {
+    return this.http.delete<Theme>(`/api/themes/${themeId}/posts/${postId}`);
+  }
+
   // POSTS
   getPosts(limit?: number) {
     const { apiUrl } = environment;
